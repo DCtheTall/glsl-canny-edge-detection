@@ -1,6 +1,6 @@
 {
   "name": "glsl-canny-edge-detection",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An implementation of Canny edge detection for WebGL",
   "main": "lib/canny-edge-detection.glsl",
   "scripts": {
