@@ -1,0 +1,31 @@
+{
+  "name": "glsl-canny-edge-detection",
+  "version": "1.0.0",
+  "description": "An implementation of Canny edge detection for WebGL",
+  "main": "lib/canny-edge-detection.glsl",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DCtheTall/glsl-canny-edge-detector.git"
+  },
+  "keywords": [
+    "WebGL",
+    "glsl",
+    "shader",
+    "shaders",
+    "edge",
+    "detection",
+    "canny"
+  ],
+  "author": "Dylan Cutler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DCtheTall/glsl-canny-edge-detector/issues"
+  },
+  "homepage": "https://github.com/DCtheTall/glsl-canny-edge-detector#readme",
+  "dependencies": {
+    "glsl-fast-gaussian-blur": "^1.0.2"
+  }
+}
