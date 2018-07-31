@@ -48,28 +48,18 @@ vec2 getTextureIntensityGradient(
   vec2 textureCoord,
   vec2 resolution
 ) {
-  vec2 x0, x1, y0, y1;
   vec2 gradientStep = vec2(1.) / resolution;
 
-  if (textureCoord.x > gradientStep.x) x0 = vec2(-gradientStep.x, 0.);
-  else x0 = vec2(0.);
-  if (1. - textureCoord.x > gradientStep.x) x1 = vec2(gradientStep.x, 0.);
-  else x1 = vec2(0.);
-  if (textureCoord.y > gradientStep.y) y0 = vec2(0., -gradientStep.y);
-  else y0 = vec2(0.);
-  if (1. - textureCoord.y > gradientStep.y) y1 = vec2(0., gradientStep.y);
-  else y1 = vec2(0.);
+  mat3 imgMat = mat3(0.);
 
-  mat3 imgMat = mat3(
-    getTextureIntensity(textureSampler, textureCoord + x0 + y0, resolution),
-    getTextureIntensity(textureSampler, textureCoord + y0, resolution),
-    getTextureIntensity(textureSampler, textureCoord + x1 + y0, resolution),
-    getTextureIntensity(textureSampler, textureCoord + x0, resolution),
-    getTextureIntensity(textureSampler, textureCoord, resolution),
-    getTextureIntensity(textureSampler, textureCoord + x1, resolution),
-    getTextureIntensity(textureSampler, textureCoord + x0 + y1, resolution),
-    getTextureIntensity(textureSampler, textureCoord + y1, resolution),
-    getTextureIntensity(textureSampler, textureCoord + x1 + y1, resolution));
+  for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+      vec2 ds = vec2(
+        -gradientStep.x + (float(i) * gradientStep.x),
+        -gradientStep.y + (float(j) * gradientStep.y));
+      imgMat[i][j] = getTextureIntensity(textureSampler, textureCoord + ds, resolution);
+    }
+  }
 
   float gradX = convoluteMatrices(X_COMPONENT_MATRIX, imgMat);
   float gradY = convoluteMatrices(Y_COMPONENT_MATRIX, imgMat);
