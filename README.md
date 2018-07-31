@@ -1,4 +1,4 @@
-![Edge detection photo](/example.png?raw=true =200x200 "Edge detection photo")
+!<img alt="Edge detection photo" src="./example.png" width="256" height="256"/>
 
 # glsl-canny-edge-detection
 GLSL Canny edge detection module for WebGL
