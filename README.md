@@ -1,7 +1,14 @@
 !<img alt="Edge detection photo" src="./assets/example.jpg" width="512" height="256"/>
 
 # glsl-canny-edge-detection
+
 GLSL Canny edge detection for WebGL textures
+---
+
+## License
+This software is distributed under an MIT license.
+See LICENSE.md for more information.
+
 ---
 
 [Live demo](https://dcthetall-edge-detection.herokuapp.com/)
