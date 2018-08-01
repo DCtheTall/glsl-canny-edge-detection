@@ -1,30 +1,32 @@
 {
   "name": "glsl-canny-edge-detection",
-  "version": "1.0.3",
-  "description": "An implementation of Canny edge detection for WebGL",
+  "version": "1.0.4",
+  "description": "Canny edge detection for 2D texture samplers in WebGL",
   "main": "lib/canny-edge-detection.glsl",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DCtheTall/glsl-canny-edge-detector.git"
+    "url": "git+https://github.com/DCtheTall/glsl-canny-edge-detection.git"
   },
   "keywords": [
-    "WebGL",
+    "webgl",
     "glsl",
+    "glslify",
     "shader",
     "shaders",
     "edge",
     "detection",
-    "canny"
+    "canny",
+    "texture"
   ],
   "author": "Dylan Cutler",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DCtheTall/glsl-canny-edge-detector/issues"
+    "url": "https://github.com/DCtheTall/glsl-canny-edge-detection/issues"
   },
-  "homepage": "https://github.com/DCtheTall/glsl-canny-edge-detector#readme",
+  "homepage": "https://github.com/DCtheTall/glsl-canny-edge-detection#readme",
   "dependencies": {
     "glsl-fast-gaussian-blur": "^1.0.2"
   }
