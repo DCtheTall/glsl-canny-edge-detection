@@ -57,7 +57,8 @@ vec2 getTextureIntensityGradient(
       vec2 ds = vec2(
         -gradientStep.x + (float(i) * gradientStep.x),
         -gradientStep.y + (float(j) * gradientStep.y));
-      imgMat[i][j] = getTextureIntensity(textureSampler, textureCoord + ds, resolution);
+      imgMat[i][j] = getTextureIntensity(
+        textureSampler, clamp(textureCoord + ds, vec2(0.), vec2(1.)), resolution);
     }
   }
 

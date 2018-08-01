@@ -15,7 +15,8 @@ float applyHysteresis(
       vec2 ds = vec2(
         -dx + (float(i) * dx),
         -dy + (float(j) * dy));
-      vec2 gradient = getSuppressedTextureIntensityGradient(textureSampler, textureCoord + ds, resolution);
+      vec2 gradient = getSuppressedTextureIntensityGradient(
+        textureSampler, clamp(textureCoord + ds, vec2(0.), vec2(1.)), resolution);
       float edge = applyDoubleThreshold(gradient, weakThreshold, strongThreshold);
       if (edge == 1.) return 1.;
     }

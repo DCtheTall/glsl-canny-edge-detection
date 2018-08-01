@@ -35,7 +35,7 @@ It also contains a module which will apply a 3x3 Sobel operator to a
 texture. For example:
 
 ```
-#pragma glslify: gradient = require(glsl-canny-edge-detection/intensity-gradient);
+#pragma glslify: gradient = require(glsl-canny-edge-detection/lib/intensity-gradient);
 
 uniform sampler2D uSampler;
 uniform vec2 uResolution;
