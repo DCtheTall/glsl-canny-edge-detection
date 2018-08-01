@@ -1,4 +1,4 @@
-#pragma glslify: getTextureIntensityGradient = require('./get-texture-intensity-gradient.glsl');
+#pragma glslify: getTextureIntensityGradient = require('./intensity-gradient.glsl');
 #pragma glslify: round2DVectorAngle = require('./round-2d-vector-angle.glsl');
 
 /**

@@ -1,11 +1,55 @@
-!<img alt="Edge detection photo" src="./example.png" width="256" height="256"/>
+!<img alt="Edge detection photo" src="./assets/example.jpg" width="512" height="256"/>
 
 # glsl-canny-edge-detection
-GLSL Canny edge detection module for WebGL
+GLSL Canny edge detection for WebGL textures
 ---
 
 [Live demo](https://dcthetall-edge-detection.herokuapp.com/)
 
+### Example Usage
+
+```
+#pragma glslify: cannyEdgeDetection = require(glsl-canny-edge-detection);
+
+uniform sampler2D uSampler;
+uniform vec2 uResolution;
+uniform float uWeakThreshold;
+uniform float uStrongThreshold;
+
+varying vec2 vTextureCoord;
+
+void main() {
+  // returns 1. if it is an edge, 0. otherwise
+  float edge = cannyEdgeDetection(
+    uSampler, vTextureCoord, uResolution, uWeakThreshold, uStrongThreshold);
+  gl_FragColor = vec4(vec3(edge), 1.);
+}
+```
+
+It also contains a module which will apply a 3x3 Sobel operator to a
+texture. For example:
+
+```
+#pragma glslify: gradient = require(glsl-canny-edge-detection/intensity-gradient);
+
+uniform sampler2D uSampler;
+uniform vec2 uResolution;
+
+varying vec2 vTextureCoord;
+
+void main() {
+  // returns 1. if it is an edge, 0. otherwise
+  vec2 grad = gradient(
+    uSampler, vTextureCoord, uResolution);
+  gl_FragColor = vec4(grad, 0., 1.);
+}
+```
+
+Applying this to the texture above will result in
+
+<img alt="Edge detection photo" src="./assets/sobel.jpg" width="256" height="256"/>
+
+---
 ### Algorithm
 This program uses Canny edge detection on images and video in real time.
 The algorithm is broken into the following steps:

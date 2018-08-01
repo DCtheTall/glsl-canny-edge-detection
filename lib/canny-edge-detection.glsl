@@ -1,5 +1,5 @@
-#pragma glslify: getSuppressedTextureIntensityGradient = require('./get-suppressed-texture-intensity-gradient.glsl');
-#pragma glslify: applyDoubleThreshold = require('./apply-double-threshold.glsl');
+#pragma glslify: getSuppressedTextureIntensityGradient = require('./suppressed-intensity-gradient.glsl');
+#pragma glslify: applyDoubleThreshold = require('./double-threshold.glsl');
 
 float applyHysteresis(
   sampler2D textureSampler,
