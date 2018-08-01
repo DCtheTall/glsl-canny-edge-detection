@@ -1,6 +1,6 @@
 {
   "name": "glsl-canny-edge-detection",
-  "version": "1.0.5",
+  "version": "1.0.4",
   "description": "Canny edge detection for 2D texture samplers in WebGL",
   "main": "lib/canny-edge-detection.glsl",
   "scripts": {
