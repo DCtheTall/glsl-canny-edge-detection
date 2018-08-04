@@ -46,7 +46,7 @@ void main() {
   // returns 1. if it is an edge, 0. otherwise
   vec2 grad = gradient(
     uSampler, vTextureCoord, uResolution);
-  gl_FragColor = vec4(grad, 0., 1.);
+  gl_FragColor = vec4(length(grad), 1.);
 }
 ```
 
