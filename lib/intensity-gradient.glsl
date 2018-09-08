@@ -1,7 +1,15 @@
 #pragma glslify: blur = require('glsl-fast-gaussian-blur/5');
 
-const mat3 X_COMPONENT_MATRIX = mat3(1., 0., -1., 2., 0., -2., 1., 0., -1.);
-const mat3 Y_COMPONENT_MATRIX = mat3(1., 2., 1., 0., 0., 0., -1., -2., -1.);
+const mat3 X_COMPONENT_MATRIX = mat3(
+  1., 0., -1.,
+  2., 0., -2.,
+  1., 0., -1.
+);
+const mat3 Y_COMPONENT_MATRIX = mat3(
+  1., 2., 1.,
+  0., 0., 0.,
+  -1., -2., -1.
+);
 
 /**
  * 3x3 Matrix convolution
