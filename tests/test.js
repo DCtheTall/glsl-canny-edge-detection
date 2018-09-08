@@ -14,7 +14,7 @@ describe('glsl-canny-edge-detection Test', () => {
     try {
       parsedShader = glslify`${SHADER}`;
     } catch (e) {
-      console.log(e);
+      if (e) console.log(e);
       err = e;
     }
     assert(err === undefined);
@@ -30,7 +30,7 @@ describe('glsl-canny-edge-detection Test', () => {
         throw new Error(`Shader failed to compile: ${gl.getShaderInfoLog(shader)}`);
       }
     } catch (e) {
-      console.log(e);
+      if (e) console.log(e);
       err = e;
     }
     assert(err === undefined);
