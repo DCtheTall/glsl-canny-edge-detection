@@ -1,7 +1,7 @@
 The MIT License (MIT)
 =====================
 
-Copyright © `2018` `Dylan James Cutler (DCtheTall)`
+Copyright © 2018 Dylan James Cutler (DCtheTall)
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
