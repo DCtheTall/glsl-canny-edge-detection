@@ -9,8 +9,6 @@ See LICENSE.md for more information.
 
 ---
 
-[Live demo](https://dcthetall-edge-detection.herokuapp.com/)
-
 ### Example Usage
 
 ```
